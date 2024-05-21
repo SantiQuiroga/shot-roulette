@@ -7,7 +7,7 @@ from tkinter import messagebox, simpledialog
 def show_message():
     while True:
         time.sleep(random.randint(0, 180))
-        messagebox.showinfo("Time", "Shot.")
+        messagebox.showinfo("Time Bitch", "Shot.")
 
 def ask_question():
     while True:
@@ -22,9 +22,9 @@ def ask_question():
         else:
             correct_answer = num1 * num2
 
-        user_answer = simpledialog.askinteger("Shot?", f"{num1} {operation} {num2}")
+        user_answer = simpledialog.askinteger("Question Bitch", f"{num1} {operation} {num2}")
         if user_answer != correct_answer:
-            messagebox.showinfo("Wrong Bitch", "Drink a Shot.")
+            messagebox.showinfo("Wrong Bitch", "Shot.")
 
 threading.Thread(target=show_message, daemon=True).start()
 threading.Thread(target=ask_question, daemon=True).start()
