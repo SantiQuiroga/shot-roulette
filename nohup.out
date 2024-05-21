@@ -1,0 +1,17 @@
+Exception in thread Thread-2 (ask_question):
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/santi/Desktop/roulette/Roulette.py", line 26, in ask_question
+    user_answer = simpledialog.askinteger("Shot?", f"{num1} {operation} {num2}")
+  File "/usr/lib/python3.10/tkinter/simpledialog.py", line 355, in askinteger
+    d = _QueryInteger(title, prompt, **kw)
+  File "/usr/lib/python3.10/tkinter/simpledialog.py", line 283, in __init__
+    Dialog.__init__(self, parent, title)
+  File "/usr/lib/python3.10/tkinter/simpledialog.py", line 144, in __init__
+    self.grab_set()
+  File "/usr/lib/python3.10/tkinter/__init__.py", line 941, in grab_set
+    self.tk.call('grab', 'set', self._w)
+_tkinter.TclError: grab failed: another application has grab
