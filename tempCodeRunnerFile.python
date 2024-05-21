@@ -1,0 +1,10 @@
+import tkinter as tk
+from tkinter import messagebox
+
+def show_message():
+    root = tk.Tk()
+    root.withdraw()  # Hide the main window
+    messagebox.showinfo("Title", "Your message here")
+    root.destroy()  # Destroy the main window when done
+
+show_message()
