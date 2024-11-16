@@ -1,13 +1,14 @@
 import random
 import threading
 import time
-import tkinter as tk
 from tkinter import messagebox, simpledialog
+
 
 def show_message():
     while True:
         time.sleep(random.randint(0, 180))
         messagebox.showinfo("Time Bitch", "Shot.")
+
 
 def ask_question():
     while True:
@@ -26,6 +27,7 @@ def ask_question():
         if user_answer != correct_answer:
             messagebox.showinfo("Wrong Bitch", "Shot.")
 
+
 threading.Thread(target=show_message, daemon=True).start()
 threading.Thread(target=ask_question, daemon=True).start()
 
@@ -34,9 +36,7 @@ while True:
 
 # To Run: 
 # ./run.sh
-#  
 # To Stop:
 # pgrep -f Roulette.py
-#
 # Copy the ID it gives you and then:
 # kill -9 <ID>
